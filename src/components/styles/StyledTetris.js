@@ -7,9 +7,15 @@ export const StyledTetrisWrapper = styled.div`
   background: url(${bgImage}) #000;
   background-size: cover;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const StyledTetris = styled.div`
+  width: 100%;
   display: flex;
   align-items: flex-start;
   padding: 40px;
