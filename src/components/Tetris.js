@@ -62,6 +62,7 @@ const Tetris = () => {
     setRows(0);
     setLevel(0);
     setIsAudioPlaying(true);
+    setPaused({ isPaused: false, currentDropTime: null})
   };
 
   const handlePauseGame = () => {
@@ -75,7 +76,7 @@ const Tetris = () => {
   };
 
   const handleSaveGame = ({ answer, name }) => {
-    if (answer === "yes") {
+    if (answer === "Save") {
       setSavedGameState({
         name,
         score,
@@ -84,7 +85,11 @@ const Tetris = () => {
       });
       setSaveYourGame(false);
       setGameOver(false);
-    } else return resetPlayer();
+    } else {
+      setStage(createStage());
+      setSaveYourGame(false);
+      setGameOver(false);
+    }
   };
 
   const handleGameOver = () => {

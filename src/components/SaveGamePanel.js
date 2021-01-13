@@ -7,11 +7,11 @@ const SaveGamePanel = ({ handleSave }) => {
 
   return (
     <StyledSaveGame>
-      <p style={{ color: "#fff" }}>Save your game?</p>
+      <p style={{ color: "#fff" }}>Input your name to save your game...</p>
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <StartButton
         callBack={() => handleSave({ answer: "yes", name })}
-        text="Yes"
+        text="Save"
       />
       <StartButton
         callBack={() => handleSave({ answer: "no" })}
