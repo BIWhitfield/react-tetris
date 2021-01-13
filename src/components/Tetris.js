@@ -62,16 +62,16 @@ const Tetris = () => {
     setRows(0);
     setLevel(0);
     setIsAudioPlaying(true);
-    setPaused({ isPaused: false, currentDropTime: null})
+    setPaused({ isPaused: false, currentDropTime: null });
   };
 
   const handlePauseGame = () => {
     if (!pause.isPaused) {
       setPaused({ isPaused: true, currentDropTime: dropTime });
-      setDropTime(null);
+      return setDropTime(null);
     } else {
       setDropTime(pause.currentDropTime);
-      setPaused({ isPaused: false, currentDropTime: null });
+      return setPaused({ isPaused: false, currentDropTime: null });
     }
   };
 
@@ -123,6 +123,7 @@ const Tetris = () => {
   };
 
   const keyUp = ({ keyCode }) => {
+    if (pause.isPaused) return;
     if (!gameOver) {
       if (keyCode === 40) {
         setDropTime(1000 / (level + 1) + 200);
@@ -139,6 +140,7 @@ const Tetris = () => {
   };
 
   const move = ({ keyCode }) => {
+    if (pause.isPaused) return;
     if (!gameOver) {
       if (keyCode === 37) {
         movePlayerLeftOrRight(-1);
