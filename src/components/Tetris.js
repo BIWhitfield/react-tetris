@@ -42,7 +42,7 @@ const Tetris = () => {
     resetPlayer();
     setGameOver(false);
     setScore(0);
-    setRows(10);
+    setRows(0);
     setLevel(0);
     setIsAudioPlaying(true);
   };
