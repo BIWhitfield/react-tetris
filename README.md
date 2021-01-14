@@ -5,9 +5,12 @@
 2: Yarn
 3: Yarn Start
 
+## View the latest deployed version [here](https://elegant-chandrasekhar-585f4c.netlify.app/)
+
 ## Todo
-* Add music to levels
-* Add ability to save player name and score at GameOver
+* ~~Add music to levels √
+* ~~Add ability to save player name and score at GameOver (localstorage) √
+* ~~Add ability to pause √
 * Add high score table
 * Add serverless backend to keep track of high scores
 
