@@ -13,5 +13,6 @@
 * ~~Add ability to pause √
 * Add high score table
 * Add serverless backend to keep track of high scores
+* Add web browser only message on mobile
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
